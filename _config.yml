@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo2
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
+title: 司宇啊的博客
+subtitle: '👨🏻‍💻 好好学习，天天敲代码 👨🏻‍💻'
+description: '记录生活，记录工作，记录学习'
+keywords: '前端开发, 前端工程师, 前端技术, 前端学习, 前端博客'
+author: CYS
+language: zh-CN
 timezone: ''
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+## 设置你的站点URL，例如，如果你使用GitHub Page，设置url为'https://username.github.io/project'
 url: https://sian-siyu.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -96,7 +96,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+## 设置主题   例如：landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
