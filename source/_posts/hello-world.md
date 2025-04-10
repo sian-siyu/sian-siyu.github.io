@@ -1,5 +1,11 @@
 ---
 title: Hello，World！
+date: 2025-03-28 15:34:58
+tags: 你好，世界！
+# categories: 学习
+---
+---
+title: Hello，World！
 ---
 欢迎来到 [Hexo](https://hexo.io/)！这是你的第一篇文章。查看 [文档](https://hexo.io/docs/) 获取更多信息。如果在使用 Hexo 时遇到任何问题，你可以在 [故障排除](https://hexo.io/docs/troubleshooting.html) 中找到答案，或者在 [GitHub](https://github.com/hexojs/hexo/issues) 上向我提问。
 

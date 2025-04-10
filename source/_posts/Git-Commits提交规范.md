@@ -2,7 +2,7 @@
 title: Git Commits提交规范
 date: 2025-04-01 10:24:09
 tags:
-
+categories: 学习
 ---
 
 > Conventional Commits 是一种用于 Git 提交信息格式化的约定，旨在使提交信息更加规范和一致，便于自动化工具进行处理和分析。

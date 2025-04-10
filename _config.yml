@@ -2,109 +2,94 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: 司宇的博客  # 网站标题
-subtitle: "世上无难事，只要肯登攀！" # 网站副标题
-description: "👨🏻‍💻 记录生活，记录工作，记录学习 👨🏻‍💻" # 网站描述
-keywords: "前端开发, 前端工程师, 前端技术, 前端学习, 前端博客" # 网站关键词
-author: CYS # 网站作者
-language: zh-CN # 网站语言,默认为en
-timezone: "Asia/Shanghai" # 网站时区
+# 站点设置
+title: 司宇的博客  # 网站标题，显示在浏览器标签页和网站顶部
+subtitle: "💪 世上无难事，只要肯登攀！💪" # 网站副标题，显示在网站标题下方
+description: "🎯记录生活，记录工作，记录学习。 👨🏻‍💻 好好学习，天天敲代码 👨🏻‍💻" # 网站描述，用于SEO和社交媒体分享  // 🔥 奋斗 | ⚡ 冲刺 | 🚀 突破 | 💪 加油 | 🎯 目标 | 🏆 胜利 | ⏳ 时间管理 | 📈 成长
+keywords: "前端开发, 前端工程师, 前端技术, 前端学习, 前端博客" # 网站关键词，用于SEO优化
+author: CYS # 网站作者，显示在文章底部和版权信息中
+language: # 网站语言，支持多语言，按优先级排序
+  - zh-CN
+  - en
+timezone: "Asia/Shanghai" # 网站时区，影响文章发布时间显示
 
-# URL
-## 设置你的站点URL，例如，如果你使用GitHub Page，设置url为'https://username.github.io/project'
-url: https://sian-siyu.github.io  # 网站URL
-permalink: :year/:month/:day/:title/  # 文章的永久链接格式
-permalink_defaults:
+# URL设置
+url: https://sian-siyu.github.io  # 网站URL，必须设置正确才能正常部署
+permalink: :year/:month/:day/:title/  # 文章的永久链接格式，:year/:month/:day/:title/ 表示按年/月/日/标题组织
+permalink_defaults:  # 永久链接中各部分的默认值
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: true # 是否在链接末尾保留 'index.html'，设置为false可以生成更简洁的URL
+  trailing_html: true # 是否在链接末尾保留 '.html'，设置为false可以生成更简洁的URL
 
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
+# 目录设置
+source_dir: source  # 源文件目录，存放文章、页面等源文件
+public_dir: public  # 公共文件目录，存放生成的静态文件
+tag_dir: tags  # 标签目录，存放标签页面
+archive_dir: archives  # 归档目录，存放归档页面
+category_dir: categories  # 分类目录，存放分类页面
+code_dir: downloads/code  # 代码下载目录，存放可下载的代码文件
+i18n_dir: :lang  # 国际化目录，存放多语言文件
+skip_render:  # 跳过渲染的文件，支持通配符
 
-# Writing
-new_post_name: :title.md # 新文章的文件名
-default_layout: post # 默认布局
-titlecase: false # 是否将标题转换为标题大小写
+# 写作设置
+new_post_name: :title.md # 新文章的文件名格式，:title表示使用文章标题
+default_layout: post # 默认布局，可选值：post、page、draft等
+titlecase: false # 是否将标题转换为标题大小写，true则首字母大写
 external_link:
-  enable: true # 是否打开外部链接
+  enable: true # 是否打开外部链接，true则在新窗口打开外部链接
   field: site # 应用到整个站点
-  exclude: ""
-filename_case: 0
-render_drafts: false
-post_asset_folder: true # 是否开启文章资源文件夹
+  exclude: "" # 排除的域名，用逗号分隔
+filename_case: 0 # 文件名大小写，0为保持原样，1为小写，2为大写
+render_drafts: false # 是否渲染草稿
+post_asset_folder: true # 是否开启文章资源文件夹，true则每篇文章都会创建一个同名文件夹存放资源
 marked:
   prependRoot: true # 是否在根目录下添加资源文件夹
   postAsset: true # 是否在文章目录下添加资源文件夹
-relative_link: false # 是否启用相对链接
-future: true # 是否显示未来的文章
-syntax_highlighter: highlight.js # 语法高亮器
+relative_link: true # 是否启用相对链接，true则使用相对路径
+future: true # 是否显示未来的文章，true则显示发布日期大于当前时间的文章
+syntax_highlighter: highlight.js # 语法高亮器，可选值：highlight.js、prismjs
 highlight:
   line_number: true # 是否显示行号
-  auto_detect: false
-  tab_replace: ""
-  wrap: true
-  hljs: false
+  auto_detect: false # 是否自动检测语言
+  tab_replace: "" # 替换tab的字符串
+  wrap: true # 是否换行
+  hljs: false # 是否使用highlight.js的样式
 prismjs:
-  preprocess: true
-  line_number: true
-  tab_replace: ""
+  preprocess: true # 是否预处理
+  line_number: true # 是否显示行号
+  tab_replace: "" # 替换tab的字符串
 
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
 # 首页设置
 index_generator:
-  path: "" # 首页路径
-  per_page: 10 # 每页显示的文章数量
-  order_by: -date # 文章排序方式
+  path: "" # 首页路径，默认为空表示根目录
+  per_page: 5 # 每页显示的文章数量，0表示不分页
+  order_by: -date # 文章排序方式，-date表示按日期倒序
 
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
+# 分类和标签设置
+default_category: uncategorized  # 默认分类，当文章未指定分类时使用
+category_map:  # 分类映射，用于重命名分类
+tag_map:  # 标签映射，用于重命名标签
 
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
+# 元数据设置
+meta_generator: true  # 是否生成元数据，true则生成meta标签
 
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-## updated_option supports 'mtime', 'date', 'empty'
-updated_option: "mtime"
+# 日期/时间格式设置
+date_format: YYYY-MM-DD  # 日期格式，使用Moment.js格式
+time_format: HH:mm:ss  # 时间格式，使用Moment.js格式
+updated_option: "mtime"  # 更新选项，可选值：mtime(文件修改时间)、date(文章日期)、empty(不显示)
 
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
+# 分页设置
+per_page: 5  # 每页显示数量，0表示不分页
+pagination_dir: page  # 分页目录，默认为page
 
-# Include / Exclude file(s)
-## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
+# 包含/排除文件设置
+include:  # 包含的文件，支持通配符
+exclude:  # 排除的文件，支持通配符
+ignore:  # 忽略的文件，支持通配符
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-## 设置主题   例如：landscape
-theme: next # 主题名称
+# 扩展设置
+theme: next # 主题名称，当前使用Next主题
 
-
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+# 部署设置
 deploy:
-  type: ""
+  type: ""  # 部署类型，可选值：git、heroku、rsync等
